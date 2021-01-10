@@ -8,6 +8,13 @@ https://support.illumina.com/content/dam/illumina-support/documents/downloads/pr
 ### Our curated manifest
 https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/mouse_manifest_final.txt.gz
 
+An example of reading mouse array IDATs from SeSAMe
+```R
+library(sesame)
+mft <- readRDS(url("https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/mouse_manifest_final_sesame.rds"))
+ssets <- lapply(searchIDATprefixes('path_to_IDAT_folder'), readIDATpair, manifest=mft, platform='MM285')
+```
+
 #### Column Description
 - 1-3: chrm, beg, end of target, length 2 for CpG, length 1 for SNP and CpH. beg is 0-based and end is 1-based like in bed files.
 - 4-5: tango address for M and U
