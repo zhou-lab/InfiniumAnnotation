@@ -6,12 +6,12 @@ https://support.illumina.com/downloads/infinium-mouse-methylation-manifest-file-
 https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/mouse-methylation/Infinium%20Mouse%20Methylation%20v1.0%20A1%20GS%20Manifest%20File.csv
 
 ### Our curated manifest
-https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/mouse_manifest_final.txt.gz
+https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz
 
 An example of reading mouse array IDATs from SeSAMe
 ```R
 library(sesame)
-mft <- readRDS(url("https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/mouse_manifest_final_sesame.rds"))
+mft <- readRDS(url("https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.rds"))
 ssets <- lapply(searchIDATprefixes('path_to_IDAT_folder'), readIDATpair, manifest=mft, platform='MM285')
 ```
 
