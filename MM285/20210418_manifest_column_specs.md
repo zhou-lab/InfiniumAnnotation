@@ -1,6 +1,4 @@
-## MM285 manifest
-
-Column Header
+## MM285 Manifest Column Header
 
 - 1-3: chrm, beg, end of target, length 2 for CpG, length 1 for SNP and CpH. beg is 0-based and end is 1-based like in bed files.
 - 4-5: tango address for M and U
