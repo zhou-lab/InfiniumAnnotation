@@ -6,7 +6,7 @@ This repository hosts the annotation of Infinium DNA methylation BeadChip Probes
 
 Reference: [Zhou et al. 2016 Nucleic Acid Res](https://academic.oup.com/nar/article/45/4/e22/2290930) | https://doi.org/10.1093/nar/gkw967
 
-## [Mouse Array (MM285)](MM285.md)
+## [Mouse Array (MM285)](MM285/README.md)
 
 Reference: In submission
 
