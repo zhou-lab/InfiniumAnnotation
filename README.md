@@ -28,6 +28,12 @@ ssets <- lapply(searchIDATprefixes('path_to_IDAT_folder'), readIDATpair, manifes
 - 21-29: mapFlag.B, mapChrm.B, mapPos.B, mapQ.B, mapCigar.B, mapSeq.B, mapNM.B, mapAS.B, mapYD.B
 - 30: design category string
 
+### Gene association (ToDo)
+
+### Histone Modification (ToDo)
+
+### TFBS (ToDo)
+
 ### Mouse Array ID system
 
 <img src="20210110_mouse_array_ID.png" alt="" width="660">
