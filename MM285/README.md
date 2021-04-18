@@ -18,7 +18,7 @@ Gene association of probes based on GENCODE vM25 transcript definition. This fil
 
 ## Epigenomic Feature Overlap
 
-### ChromHMM (TODO)
+### ChromHMM (to come)
 
 ### Histone Modification 
 
