@@ -1,6 +1,6 @@
 # MouseMethylation (MM285)
 
-see also [other infinium arrays](README.md)
+see also [other infinium arrays](../README.md)
 
 ## [Manifest (based on mm10 assembly)](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
 

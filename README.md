@@ -1,6 +1,6 @@
-# Annotation for Infinium Arrays
+# Annotation for Infinium DNA Methylation BeadChips
 
-This repository hosts the annotation of Infinium DNA methylation BeadChip Probes. These annotation includes basic probe design information such as Infinium I/II, target sequence context, tango address on the array, probe sequence, design principle, probe exclusion lists (masks), gene association, overlap with epigenomic features including histone modification, transcription factor binding, CpG island, imprinting loci etc.
+This repository hosts the annotation of Infinium DNA methylation BeadChip Probes. These annotation includes basic probe design information such as mapping location, Infinium-I vs Infinium-II chemistry, target sequence context, tango address on the array, probe sequence, design principle, probe exclusion lists (masks), gene association, overlap with epigenomic features including histone modification, transcription factor binding, CpG island, imprinting loci etc.
 
 ## [Human Arrays (EPIC, HM450, HM27)](http://zwdzwd.github.io/InfiniumAnnotation)
 
