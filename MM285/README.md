@@ -16,7 +16,7 @@ The mouse array uses an improved ID system that is built on top of the conventio
 
 Gene association of probes based on GENCODE vM25 transcript definition. This file includes annotation of probes if they fall from 1.5kbp upstream Transcription Start Site (TSS/Promoter), to Transcription Termination Site. A probe can be considered promoter associated if it is located from 1.5kbps upstream TSS to 1.5kbps dwonstream TSS. This information is given in the distToTSS column. Otherwise, the probe is considered associated with gene body. All isoforms are considered for each gene.
 
-## Epigenomic Feature Overlap
+## Epigenomic Feature Annotation
 
 ### [ChromHMM](http://zhouserver.research.chop.edu/InfiniumAnnotation/20210109/MM285/MM285.mm10.chromHMM.tsv.gz)
 
