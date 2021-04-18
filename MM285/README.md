@@ -6,9 +6,9 @@ see also [other infinium arrays](../README.md)
 
 [Column Header Specification](20210418_manifest_column_specs.md).
 
-#### [Mouse Array ID system](20210418_manifest_column_specs.md)
+#### [Mouse Array ID system](202010418_MouseArray_ID_system.md)
 
-The mouse array uses an improved ID system that is built on top of the conventional "cg" numbers that EPIC and HM450 human array uses. The new ID system uniquely specifies the design details. The new ID system is designed to accomodate more flexible probe design such as replicates and opposite-strand design. See [here](20210418_manifest_column_specs.md) for detail.
+The mouse array uses an improved ID system that is built on top of the conventional "cg" numbers that EPIC and HM450 human array uses. The new ID system uniquely specifies the design details. The new ID system is designed to accomodate more flexible probe design such as replicates and opposite-strand design. See [here](202010418_MouseArray_ID_system.md) for detail.
 
 ## [Manifest (based on mm39 assembly)](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm39.manifest.tsv.gz)
 
