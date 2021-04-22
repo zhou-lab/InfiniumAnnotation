@@ -2,7 +2,7 @@
 
 see also [other infinium arrays](../README.md)
 
-## [Manifest (based on xxx assembly)]()
+## [Manifest (based on xxx assembly)](https://zhouserver.research.chop.edu/moyerej/InfiniumAnnotation/HorvathMammal40.CanonicalManifest.3.2019.manifest.csv)
 
 [Column Header Specification]().
 
@@ -53,7 +53,7 @@ ssets <- lapply(searchIDATprefixes('path_to_IDAT_folder'), readIDATpair, manifes
 
 ## Illumina manifest
 
-#### [Support Document Download Page]()
+<!-- #### [Support Document Download Page]() --->
 
 #### [Manifest File]()
 
