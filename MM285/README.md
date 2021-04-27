@@ -12,7 +12,7 @@ The mouse array uses an improved ID system that is built on top of the conventio
 
 ## [Manifest (based on mm39 assembly)](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm39.manifest.tsv.gz)
 
-## [Characterization of the mouse array on 310 species](https://github.com/zhou-lab/mouse_array_multispecies)
+## [Manifest (310 species from Ensembl v101)](https://github.com/zhou-lab/mouse_array_multispecies)
 
 ## [Gene Association](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.gencode.vM25.tsv.gz)
 
