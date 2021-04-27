@@ -12,6 +12,8 @@ The mouse array uses an improved ID system that is built on top of the conventio
 
 ## [Manifest (based on mm39 assembly)](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm39.manifest.tsv.gz)
 
+## [Characterization of the mouse array on 310 species](https://github.com/zhou-lab/mouse_array_multispecies)
+
 ## [Gene Association](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.gencode.vM25.tsv.gz)
 
 Gene association of probes based on GENCODE vM25 transcript definition. This file includes annotation of probes if they fall from 1.5kbp upstream Transcription Start Site (TSS/Promoter), to Transcription Termination Site. A probe can be considered promoter associated if it is located from 1.5kbps upstream TSS to 1.5kbps dwonstream TSS. This information is given in the distToTSS column. Otherwise, the probe is considered associated with gene body. All isoforms are considered for each gene.
