@@ -22,6 +22,8 @@ Gene association of probes based on GENCODE vM25 transcript definition. This fil
 
 ### [ChromHMM](http://zhouserver.research.chop.edu/InfiniumAnnotation/20210109/MM285/MM285.mm10.chromHMM.tsv.gz)
 
+### [Imprinting ICR Annotation](https://github.com/zhou-lab/ImprintingAnno/blob/master/README.md)
+
 ### Histone Modification 
 
 Histone modification data was obtained through the ENCODE database. Each tsv.gz file is identified by its GSM ID corresponding to the sample from the Gene Expression Omnibus (GEO).
