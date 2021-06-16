@@ -4,6 +4,8 @@ see also [other infinium arrays](../README.md)
 
 ## [Manifest (based on mm10 assembly)](http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
 
+http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz
+
 [Manifest (based on mm10 assembly)](http://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
 
 [Column Header Specification](20210418_manifest_column_specs.md).
