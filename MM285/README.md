@@ -4,6 +4,8 @@ see also [other infinium arrays](../README.md)
 
 ## [Manifest (based on mm10 assembly)](http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
 
+[Manifest (based on mm10 assembly)](http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
+
 [Column Header Specification](20210418_manifest_column_specs.md).
 
 #### [Mouse Array ID system](202010418_MouseArray_ID_system.md)
