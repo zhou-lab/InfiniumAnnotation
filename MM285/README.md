@@ -2,7 +2,7 @@
 
 see also [other infinium arrays](../README.md)
 
-## [Manifest (based on mm10 assembly)](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
+## [Manifest (based on mm10 assembly)](http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.tsv.gz)
 
 [Column Header Specification](20210418_manifest_column_specs.md).
 
@@ -10,11 +10,11 @@ see also [other infinium arrays](../README.md)
 
 The mouse array uses an improved ID system that is built on top of the conventional "cg" numbers that EPIC and HM450 human array uses. The new ID system uniquely specifies the design details. The new ID system is designed to accomodate more flexible probe design such as replicates and opposite-strand design. See [here](202010418_MouseArray_ID_system.md) for detail.
 
-## [Manifest (based on mm39 assembly)](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm39.manifest.tsv.gz)
+## [Manifest (based on mm39 assembly)](http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm39.manifest.tsv.gz)
 
 ## [Manifest (310 species from Ensembl v101)](https://github.com/zhou-lab/mouse_array_multispecies)
 
-## [Gene Association](https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.gencode.vM25.tsv.gz)
+## [Gene Association](http://zhouserver.research.chop.edu/InfiniumAnnotation/current/MM285/MM285.mm10.manifest.gencode.vM25.tsv.gz)
 
 Gene association of probes based on GENCODE vM25 transcript definition. This file includes annotation of probes if they fall from 1.5kbp upstream Transcription Start Site (TSS/Promoter), to Transcription Termination Site. A probe can be considered promoter associated if it is located from 1.5kbps upstream TSS to 1.5kbps dwonstream TSS. This information is given in the distToTSS column. Otherwise, the probe is considered associated with gene body. All isoforms are considered for each gene.
 
@@ -49,15 +49,7 @@ library(sesame)
 betas = openSesame("IDAT_folder")
 ```
 
-More information can be found at the sesame [mouse array vignette](https://bioconductor.org/packages/devel/bioc/vignettes/sesame/inst/doc/mouse.html).
-
-For previous versions, you need to supply the custom sesame order file for mouse array. Here is an example of using custom order file.
-
-```R
-library(sesame)
-mft <- readRDS(url("https://zwdzwd.s3.amazonaws.com/InfiniumAnnotation/current/MM285/MM285.address.rds"))
-ssets <- lapply(searchIDATprefixes('path_to_IDAT_folder'), readIDATpair, manifest=mft$ordering, controls=mft$controls, platform='MM285')
-```
+More information can be found at the sesame [mouse array vignette](https://bioconductor.org/packages/devel/bioc/vignettes/sesame/inst/doc/nonhuman.html).
 
 ## Illumina manifest
 
@@ -67,4 +59,4 @@ ssets <- lapply(searchIDATprefixes('path_to_IDAT_folder'), readIDATpair, manifes
 
 ## Reference
 
-_in submission_
+_in preparation_
