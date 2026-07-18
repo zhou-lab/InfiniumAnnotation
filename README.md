@@ -16,17 +16,18 @@ git-tagged snapshot.
 
 ## Platforms
 
-| Platform | Array | Manifest | Genome | Probes |
-|---|---|---|---|---|
-| **MSA** | Infinium Methylation Screening Array (MSA-48v1-0) | B1 | hg38 | ~284k |
-| **EPICv2** | Infinium MethylationEPIC v2.0 (EPIC-8v2-0) | A2 | hg38 | ~938k |
-| **EPIC** | Infinium MethylationEPIC v1.0 | B5 | hg38 | ~867k |
-| **HM450** | HumanMethylation450 | v1.2 | hg38 | ~486k |
-| **HM27** | HumanMethylation27 | v1.2 | hg38 | ~28k |
-| **MM285** | Infinium Mouse Methylation (MouseMethylation-12v1-0) | A2 | mm10, mm39 | ~288k |
-| **Mammal40** | HorvathMammal40 Mammalian Methylation | Canonical 3.2019 | hg38 | ~39k |
+| Platform | Array | Manifest | Genome | Probes | Reference |
+|---|---|---|---|---|---|
+| **MSA** | Infinium Methylation Screening Array (MSA-48v1-0) | B1 | hg38 | 284,309 | [Goldberg 2025](https://www.sciencedirect.com/science/article/pii/S2666979X25001855) |
+| **EPICv2** | Infinium MethylationEPIC v2.0 (EPIC-8v2-0) | A2 | hg38 | 937,690 | [Kaur 2024](https://doi.org/10.1186/s43682-023-00021-5) |
+| **EPIC** | Infinium MethylationEPIC v1.0 | B5 | hg38 | 866,553 | [Zhou 2016](https://doi.org/10.1093/nar/gkw967) |
+| **HM450** | HumanMethylation450 | v1.2 | hg38 | 486,427 | [Zhou 2016](https://doi.org/10.1093/nar/gkw967) |
+| **HM27** | HumanMethylation27 | v1.2 | hg38 | 27,722 | [Zhou 2016](https://doi.org/10.1093/nar/gkw967) |
+| **MM285** | Infinium Mouse Methylation (MouseMethylation-12v1-0) | A2 | mm10, mm39 | 287,692 | [Zhou 2022](https://www.sciencedirect.com/science/article/pii/S2666979X22000775) |
+| **Mammal40** | HorvathMammal40 Mammalian Methylation | Canonical 3.2019 | hg38 | 38,607 | [Arneson 2022](https://doi.org/10.1038/s41467-022-28355-z) |
 
-Each manifest revision is the current/final one Illumina ships for that array.
+Probe counts are exact rows in each `<PLAT>.ordering.tsv.gz`. Each manifest
+revision is the current/final one Illumina ships for that array.
 
 ## What's in each platform directory
 
@@ -99,9 +100,25 @@ Tag history: `v1` MSA · `v2` +postalt, +EPICv2 · `v3` +HM450/EPIC, +`coord` ·
 
 ## References
 
-- Human array design & masks — Zhou, Laird & Shen, *Comprehensive characterization,
+Per platform:
+
+- **MSA** — Goldberg *et al.*, *Scalable screening of ternary-code DNA methylation
+  dynamics associated with human traits*,
+  [Cell Genomics 2025](https://www.sciencedirect.com/science/article/pii/S2666979X25001855).
+- **EPICv2** — Kaur *et al.*, *Comprehensive evaluation of the Infinium human
+  MethylationEPIC v2 BeadChip*,
+  [Epigenetics Communications 2024](https://doi.org/10.1186/s43682-023-00021-5).
+- **EPIC / HM450 / HM27** — Zhou, Laird & Shen, *Comprehensive characterization,
   annotation and innovative use of Infinium DNA methylation BeadChip probes*,
   [Nucleic Acids Research 2016](https://doi.org/10.1093/nar/gkw967).
-- Feature interpretation — Goldberg\*, Fu\*, *et al.*, *KnowYourCG: Facilitating
-  base-level sparse methylome interpretation*, Science Advances 2025.
-- Mouse array (MM285) — see the [browser](https://zwdzwd.github.io/InfiniumAnnotation).
+- **MM285** — Zhou, Hinoue, Barnes *et al.*, *DNA methylation dynamics and
+  dysregulation delineated by high-throughput profiling in the mouse*,
+  [Cell Genomics 2022](https://www.sciencedirect.com/science/article/pii/S2666979X22000775).
+- **Mammal40** — Arneson, Haghani *et al.* (Horvath), *A mammalian methylation array
+  for profiling methylation levels at conserved sequences*,
+  [Nature Communications 2022](https://doi.org/10.1038/s41467-022-28355-z).
+
+Methods:
+
+- **Feature interpretation (KnowYourCG)** — Goldberg\*, Fu\*, *et al.*, *KnowYourCG:
+  Facilitating base-level sparse methylome interpretation*, Science Advances 2025.
