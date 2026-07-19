@@ -51,29 +51,31 @@ target a single base (`end = CpG_beg + 1`).
 ## Matching probe names to the files
 
 The `coord`, `mask.cm`, and `KYCG/` files are **positional to the ordering** and
-do not store probe IDs (the IDs live once, in the ordering). Recover the pairing
-by joining on row position:
+do not store probe IDs (the IDs live once, in the ordering). Attach them with
+**`sesame attach-probe`**, which prepends the ordering's `Probe_ID` to any
+positional file — a coord `.tsv.gz`, a `.cm` mask/feature, or a preprocess beta
+`.cg`:
 
 ```bash
-# Coordinate table with probe names (headers and data both align):
-paste <(zcat MSA.ordering.tsv.gz | cut -f1) <(zcat MSA.hg38.coord.tsv.gz)
+# Coordinate table with probe names:
+sesame attach-probe --index MSA.ordering.tsv.gz MSA.hg38.coord.tsv.gz
 #   Probe_ID   CpG_chrm   CpG_beg   strand   mapQ
 
-# Mask matrix with probe names (yame emits data rows only, so drop the
-# ordering header with tail -n +2):
-paste <(zcat MSA.ordering.tsv.gz | tail -n +2 | cut -f1) \
-      <(yame unpack -a MSA.hg38.mask.cm)
+# Mask matrix with probe names (unpacks the .cm and prepends Probe_ID):
+sesame attach-probe --index MSA.ordering.tsv.gz MSA.hg38.mask.cm
 #   Probe_ID   <one column per mask tag>
 ```
 
-- **[YAME](https://github.com/zhou-lab/YAME)** reads the `.cm` mask and feature
-  files (`yame unpack -a`, `yame summary`, …); rows come out in ordering order.
-- **[sesame-cli](https://github.com/zwdzwd/sesame-cli)** reads IDATs against this
-  same ordering, so the β-values it emits are already in this row order — they
-  line up with `coord` / `mask.cm` / `KYCG/` with no join.
+Use `--platform MSA` instead of `--index` to pull the ordering from the fetched
+store. Without the binary, the same pairing is a positional paste, e.g.
+`paste <(zcat MSA.ordering.tsv.gz | cut -f1) <(zcat MSA.hg38.coord.tsv.gz)`.
+
+- **[sesame-cli](https://github.com/zwdzwd/sesame-cli)** — `attach-probe` (above);
+  also `preprocess` (IDATs → beta `.cg` in this same ordering), `dml`, `cnv`.
+- **[YAME](https://github.com/zhou-lab/YAME)** reads/queries the `.cm` files
+  directly (`yame unpack`, `yame summary`, …); rows come out in ordering order.
 - In R, **[sesame](https://bioconductor.org/packages/sesame)** and
-  **[KnowYourCG](https://github.com/zhou-lab/knowYourCG)** consume these
-  annotations directly.
+  **[KnowYourCG](https://github.com/zhou-lab/knowYourCG)** consume these directly.
 
 ## Versions
 
