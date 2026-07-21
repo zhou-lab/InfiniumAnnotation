@@ -39,6 +39,7 @@ The ordering is the only file that carries probe names — it is the index.
 | `<PLAT>.ordering.tsv.gz` | **The probe index.** `Probe_ID`, `M`/`U` (bead addresses), `col` (color channel). Genome-independent; derived from the manufacturer manifest, `LC_ALL=C` sorted. |
 | `<PLAT>.<genome>.coord.tsv.gz` | Per-probe genomic coordinate: `CpG_chrm`, `CpG_beg` (0-based), `strand`, `mapQ`. Positional; no probe IDs stored (see below). |
 | `<PLAT>.<genome>.mask.cm` (+`.idx`) | Design/quality masks (`M_mapping`, `M_nonuniq`, SNP masks, …) as a [YAME](https://github.com/zhou-lab/YAME) `.cm` bitset — one record per mask. Positional. |
+| `<PLAT>.typeI_ext.tsv.gz` | Infinium-I extension base for the GCT bisulfite-conversion control: `C` (extension C — Grn here means unconverted), `T` (background reference), `.` otherwise. `M_general`-masked probes are excluded. Positional. |
 | `KYCG/` | KnowYourCG feature sets as `.cm` (one dir, its own `SHA256SUMS`). Positional. |
 | `SHA256SUMS` | Binds the set. Verify with `cd <PLAT> && sha256sum -c SHA256SUMS`. |
 
