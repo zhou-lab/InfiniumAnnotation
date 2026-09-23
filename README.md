@@ -40,6 +40,7 @@ The ordering is the only file that carries probe names — it is the index.
 | `<PLAT>.<genome>.coord.tsv.gz` | Per-probe genomic coordinate: `CpG_chrm`, `CpG_beg` (0-based), `strand`, `mapQ`. Positional; no probe IDs stored (see below). |
 | `<PLAT>.<genome>.mask.cm` (+`.idx`) | Design/quality masks (`M_mapping`, `M_nonuniq`, SNP masks, …) as a [YAME](https://github.com/zhou-lab/YAME) `.cm` bitset — one record per mask. Positional. |
 | `<PLAT>.typeI_ext.tsv.gz` | Infinium-I extension base for the GCT bisulfite-conversion control: `C` (extension C — Grn here means unconverted), `T` (background reference), `.` otherwise. `M_general`-masked probes are excluded. Positional. |
+| `<PLAT>.cnvnormals.cg` (+`.idx`) | CNV normal reference panel for `sesame cnv`: raw M/U signal as a [YAME](https://github.com/zhou-lab/YAME) format-3 `.cg`, one record per normal sample. Positional. EPIC, EPICv2, HM450 and MSA only. |
 | `KYCG/` | KnowYourCG feature sets as `.cm` (one dir, its own `SHA256SUMS`). Positional. |
 | `SHA256SUMS` | Binds the set. Verify with `cd <PLAT> && sha256sum -c SHA256SUMS`. |
 
@@ -81,7 +82,7 @@ store. Without the binary, the same pairing is a positional paste, e.g.
 ## Versions
 
 The repository is released as **git tags**; each tag is a self-consistent
-snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v7**) unless
+snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.2**) unless
 you need to reproduce an older result.
 
 Common build parameters across all platforms:
@@ -99,7 +100,8 @@ Common build parameters across all platforms:
 
 Tag history: `v1` MSA · `v2` +postalt, +EPICv2 · `v3` +HM450/EPIC, +`coord` ·
 `v4` `coord` positional layout · `v5` `coord` strand fix · `v6` +MM285
-(mm10+mm39) · `v7` +Mammal40/HM27.
+(mm10+mm39) · `v7` +Mammal40/HM27, +`snp` · `v8` +`typeI_ext` ·
+`v8.1` `typeI_ext` for all platforms · `v8.2` +`cnvnormals`.
 
 ## References
 
