@@ -10,7 +10,7 @@ git-tagged snapshot.
 
 - **Interactive browser & downloads:** https://zwdzwd.github.io/InfiniumAnnotation
 - **Analyze arrays in R:** [sesame](https://bioconductor.org/packages/sesame) (Bioconductor)
-- **From IDATs on the command line:** [sesame-cli](https://github.com/zwdzwd/sesame-cli)
+- **From IDATs on the command line:** [SeSAMe2](https://github.com/zhou-lab/sesame) (`sesame` binary; docs at https://zhou-lab.github.io/sesame/)
 - **Feature enrichment:** [KnowYourCG](https://github.com/zhou-lab/knowYourCG)
 - **Read/query the `.cm` files:** [YAME](https://github.com/zhou-lab/YAME)
 
@@ -71,7 +71,7 @@ Use `--platform MSA` instead of `--index` to pull the ordering from the fetched
 store. Without the binary, the same pairing is a positional paste, e.g.
 `paste <(zcat MSA.ordering.tsv.gz | cut -f1) <(zcat MSA.hg38.coord.tsv.gz)`.
 
-- **[sesame-cli](https://github.com/zwdzwd/sesame-cli)** — `attach-probe` (above);
+- **[SeSAMe2](https://github.com/zhou-lab/sesame)** (`sesame` binary) — `attach-probe` (above);
   also `preprocess` (IDATs → beta `.cg` in this same ordering), `dml`, `cnv`.
 - **[YAME](https://github.com/zhou-lab/YAME)** reads/queries the `.cm` files
   directly (`yame unpack`, `yame summary`, …); rows come out in ordering order.
