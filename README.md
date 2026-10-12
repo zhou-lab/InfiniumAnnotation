@@ -41,6 +41,7 @@ The ordering is the only file that carries probe names — it is the index.
 | `<PLAT>.<genome>.mask.cm` (+`.idx`) | Design/quality masks (`M_mapping`, `M_nonuniq`, SNP masks, …) as a [YAME](https://github.com/zhou-lab/YAME) `.cm` bitset — one record per mask. Positional. |
 | `<PLAT>.typeI_ext.tsv.gz` | Infinium-I extension base for the GCT bisulfite-conversion control: `C` (extension C — Grn here means unconverted), `T` (background reference), `.` otherwise. `M_general`-masked probes are excluded. Positional. |
 | `<PLAT>.cnvnormals.cg` (+`.idx`) | CNV normal reference panel for `sesame cnv`: raw M/U signal as a [YAME](https://github.com/zhou-lab/YAME) format-3 `.cg`, one record per normal sample. Positional. EPIC, EPICv2, HM450 and MSA only. |
+| `<PLAT>.titration.tsv.gz` | Methylation-standard response per probe (`floor`, `top`, `rho`) for calibrating betas to a modification fraction: `f = b'/(b' + rho^gamma (1 - b'))`, `b' = (beta - floor)/max(top - floor, 0.05)`, clamped to [0, 1] (`sesame calibrate`). `gamma = 0.15`, fitted on EPICv2 bACE 5hmC vs ACE-seq; provisional for MSA and MM285. `NA` where a standard is missing. Positional. EPICv2, MSA and MM285 only. |
 | `KYCG/` | KnowYourCG feature sets as `.cm` (one dir, its own `SHA256SUMS`). Positional. |
 | `SHA256SUMS` | Binds the set. Verify with `cd <PLAT> && sha256sum -c SHA256SUMS`. |
 
@@ -82,7 +83,7 @@ store. Without the binary, the same pairing is a positional paste, e.g.
 ## Versions
 
 The repository is released as **git tags**; each tag is a self-consistent
-snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.3**) unless
+snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.4**) unless
 you need to reproduce an older result.
 
 Common build parameters across all platforms:
@@ -99,12 +100,19 @@ Common build parameters across all platforms:
   against sesame's `probe_strand`.
 - **Masks:** mapping masks (`M_mapping`, `M_nonuniq`) from the alignment; SNP
   masks from dbSNP (human) / Mouse Genomes Project strain SNPs (mm10).
+- **Titration** (v8.4): fitted on BS-converted methylation standards (0, 5,
+  10, 25, 50, 75, 100 %) run through sesame's default prep (QCDPB); replicate
+  arrays of one fraction averaged. EPICv2: 206909630042 R01-R07C01 (Kaur
+  2024, GSM7139651-57). MSA: 207760740037 R04-R16C02; only 55 % of probes pass
+  pOOBAH on all seven, the rest are `NA`. MM285: the mouse series on
+  204617710015 (the rat-DNA series on 204637490001 is excluded).
 
 Tag history: `v1` MSA · `v2` +postalt, +EPICv2 · `v3` +HM450/EPIC, +`coord` ·
 `v4` `coord` positional layout · `v5` `coord` strand fix · `v6` +MM285
 (mm10+mm39) · `v7` +Mammal40/HM27, +`snp` · `v8` +`typeI_ext` ·
 `v8.1` `typeI_ext` for all platforms · `v8.2` +`cnvnormals` ·
-`v8.3` Infinium-I channel fallback (63 probes, HM450/EPIC/MSA).
+`v8.3` Infinium-I channel fallback (63 probes, HM450/EPIC/MSA) ·
+`v8.4` +`titration` (EPICv2/MSA/MM285).
 
 ## References
 
