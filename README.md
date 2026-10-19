@@ -83,7 +83,7 @@ store. Without the binary, the same pairing is a positional paste, e.g.
 ## Versions
 
 The repository is released as **git tags**; each tag is a self-consistent
-snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.4**) unless
+snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.5**) unless
 you need to reproduce an older result.
 
 Common build parameters across all platforms:
@@ -95,7 +95,8 @@ Common build parameters across all platforms:
 - **Ordering:** from the manufacturer manifest (bead addresses + color channel),
   `LC_ALL=C` sorted — reproducible from any shell, authoritative for addresses.
   An Infinium-I channel comes from the alignment; where the probe does not
-  align cleanly, it falls back to the manifest's `Color_Channel` (v8.3).
+  align cleanly, it falls back to the manifest's `Color_Channel` (v8.3; HM27
+  from v8.5).
 - **coord strand:** the interrogated-cytosine strand (SAM FLAG), verified 100%
   against sesame's `probe_strand`.
 - **Masks:** mapping masks (`M_mapping`, `M_nonuniq`) from the alignment; SNP
@@ -112,7 +113,8 @@ Tag history: `v1` MSA · `v2` +postalt, +EPICv2 · `v3` +HM450/EPIC, +`coord` ·
 (mm10+mm39) · `v7` +Mammal40/HM27, +`snp` · `v8` +`typeI_ext` ·
 `v8.1` `typeI_ext` for all platforms · `v8.2` +`cnvnormals` ·
 `v8.3` Infinium-I channel fallback (63 probes, HM450/EPIC/MSA) ·
-`v8.4` +`titration` (EPICv2/MSA/MM285).
+`v8.4` +`titration` (EPICv2/MSA/MM285) ·
+`v8.5` channel fallback on HM27 (1 probe).
 
 ## References
 
