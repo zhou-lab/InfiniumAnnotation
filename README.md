@@ -83,7 +83,7 @@ store. Without the binary, the same pairing is a positional paste, e.g.
 ## Versions
 
 The repository is released as **git tags**; each tag is a self-consistent
-snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.5**) unless
+snapshot (every file bound by `SHA256SUMS`). Use the latest tag (**v8.6**) unless
 you need to reproduce an older result.
 
 Common build parameters across all platforms:
@@ -114,7 +114,9 @@ Tag history: `v1` MSA · `v2` +postalt, +EPICv2 · `v3` +HM450/EPIC, +`coord` ·
 `v8.1` `typeI_ext` for all platforms · `v8.2` +`cnvnormals` ·
 `v8.3` Infinium-I channel fallback (63 probes, HM450/EPIC/MSA) ·
 `v8.4` +`titration` (EPICv2/MSA/MM285) ·
-`v8.5` channel fallback on HM27 (1 probe).
+`v8.5` channel fallback on HM27 (1 probe) ·
+`v8.6` +`<PLAT>.<build>.cr` genomic-order maps and `<PLAT>.ordering.cx`
+(YAME v2.0 formats).
 
 ## References
 
